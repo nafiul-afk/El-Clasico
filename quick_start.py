@@ -87,7 +87,6 @@ def scrape_wikipedia_beautifulsoup():
 
     return None
 
-
 def main():
     print("=" * 60)
     print("El Clasico Data Collection - Quick Start")

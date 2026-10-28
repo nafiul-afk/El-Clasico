@@ -1,7 +1,6 @@
 # El Clasico All-Time Data Analysis
 
 Real Madrid vs FC Barcelona: 120+ years of rivalry data, scraped, cleaned, analyzed, and predicted.
-
 **Final Dataset:** 202 matches (1929-2026) | 68 features | Shots, fouls, cards, corners, goals, scorers
 
 ## Overview
@@ -28,9 +27,7 @@ python run_all.py --scrape    # Scrape data only
 python run_all.py --clean     # Clean and merge only
 python run_all.py --dash      # Launch dashboard only
 ```
-
 ## Project Structure
-
 ```
 El-Clasico/
 |
@@ -157,6 +154,3 @@ Launch with `streamlit run app.py`
 - Chrome browser (for Selenium scraping only)
 - All packages listed in `requirements.txt`
 
-## Author
-
-**nafiul-afk** | [GitHub](https://github.com/nafiul-afk)

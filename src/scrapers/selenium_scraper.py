@@ -78,10 +78,6 @@ class SeleniumScraper:
         print(f"Saved: {path}")
 
 
-# ------------------------------------------------------------------
-# FBref via Selenium (fallback when requests are blocked)
-# ------------------------------------------------------------------
-
 class FBrefSeleniumScraper(SeleniumScraper):
     """Use Selenium to scrape FBref when plain requests get blocked."""
 
@@ -121,10 +117,6 @@ class FBrefSeleniumScraper(SeleniumScraper):
             self.stop()
 
 
-# ------------------------------------------------------------------
-# ESPN FC via Selenium
-# ------------------------------------------------------------------
-
 class ESPNScraper(SeleniumScraper):
     """Scrape match data from ESPN FC."""
 
@@ -136,8 +128,6 @@ class ESPNScraper(SeleniumScraper):
         # ESPN search for Real Madrid vs Barcelona
         url = "https://www.espn.com/soccer/matchstats/_/gameId/"
 
-        # Alternative: team fixture page
-        # Real Madrid fixtures for a specific season
         url_fixtures = "https://www.espn.com/soccer/team/fixtures/_/id/86/real-madrid"
 
         self.start()
@@ -220,10 +210,6 @@ class SofascoreScraper(SeleniumScraper):
         finally:
             self.stop()
 
-
-# ==============================================================
-# Run
-# ==============================================================
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))

@@ -41,7 +41,6 @@ class FootballDataScraper:
 
     REQUEST_DELAY = 1
 
-    # CSV column descriptions
     COLUMN_INFO = {
         'Div': 'Division (SP1 = La Liga)',
         'Date': 'Match date',
@@ -80,10 +79,6 @@ class FootballDataScraper:
         resp.raise_for_status()
         return resp
 
-    # ----------------------------------------------------------
-    # Find all available CSV download links
-    # ----------------------------------------------------------
-
     def get_season_links(self):
         """
         Scrape the Spain page to find all CSV download links.
@@ -107,9 +102,6 @@ class FootballDataScraper:
         print(f"  Found {len(links)} La Liga season CSV links")
         return links
 
-    # ----------------------------------------------------------
-    # Download and parse a single season CSV
-    # ----------------------------------------------------------
 
     def download_season(self, csv_url):
         """
@@ -129,9 +121,7 @@ class FootballDataScraper:
             print(f"  Error parsing CSV: {e}")
             return None
 
-    # ----------------------------------------------------------
-    # Filter for El Clasico
-    # ----------------------------------------------------------
+    
 
     def filter_el_clasico(self, df):
         """Filter a La Liga DataFrame for El Clasico matches only."""
@@ -161,9 +151,6 @@ class FootballDataScraper:
 
         return df[mask].copy()
 
-    # ----------------------------------------------------------
-    # Download all seasons and extract El Clasico
-    # ----------------------------------------------------------
 
     def scrape_all_el_clasico(self):
         """

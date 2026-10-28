@@ -25,8 +25,6 @@ from sklearn.cluster import KMeans
 
 def clean_wikipedia(filepath):
     """
-    Clean the raw Wikipedia El Clasico data.
-
     Problems fixed:
       - Remove junk columns (scraped from summary tables)
       - Fix score encoding (dash character issues)
